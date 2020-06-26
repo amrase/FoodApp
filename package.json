@@ -1,0 +1,26 @@
+{
+  "name": "foodapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrase/FoodApp.git"
+  },
+  "author": "Amra Sezairi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amrase/FoodApp/issues"
+  },
+  "homepage": "https://github.com/amrase/FoodApp#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "jquery": "^3.5.1"
+  }
+}
