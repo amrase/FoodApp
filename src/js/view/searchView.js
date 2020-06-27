@@ -11,6 +11,19 @@ export const clearResults = () =>{
 }
 
 
+const limitRecipeTitle = (title, limit=17) =>{
+    const newTitle = [];
+    if (title.length > limit){
+        title.split(" ").reduce((acc,cur)=>{
+            if(acc + cur.length <= limit){
+                newTitle.push(cur);
+            }
+            return acc + cur.length;
+        },0)
+    }
+    return `${newTitle.join(' ')}...`
+}
+
 
 const renderRecipe = recipe =>{
     let html = `
@@ -20,8 +33,8 @@ const renderRecipe = recipe =>{
                 <img src="${recipe.image_url}" alt="Test">
             </figure>
             <div class="likes__data">
-                <h4 class="likes__name">${recipe.title}</h4>
-                <p class="likes__author">${recipe.publisher}/p>
+                <h4 class="likes__name">${limitRecipeTitle(recipe.title)}</h4>
+                <p class="likes__author">${recipe.publisher}</p>
             </div>
         </a>
     </li>
